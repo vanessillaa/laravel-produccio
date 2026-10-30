@@ -45,10 +45,17 @@ class BookSeeder extends Seeder
                 'pages' => 96,
                 'description' => 'Un viatge poètic sobre l’amistat i el sentit de la vida.',
             ],
+            [
+                'title' => 'L’Alquimista',
+                'author' => 'Paulo Coelho',
+                'year' => 1988,
+                'pages' => 200,
+                'description' => 'La búsqueda dels somnis i el propósit de la vida.',
+            ],
         ];
 
         foreach ($books as $b) {
-            Book::create($b);
+            Book::updateOrCreate($b);
         }
     }
 }

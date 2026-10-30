@@ -12,24 +12,7 @@
     {{-- Fonts opcionals (ex: Inter) -> afegeix-les a app.css si cal --}}
 </head>
 <body class="h-full bg-gray-50 text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100">
-    <!-- Header global -->
-    <header class="border-b border-gray-200 bg-white/80 backdrop-blur dark:border-gray-800 dark:bg-gray-900/60">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 items-center justify-between">
-                <a href="{{ url('/') }}" class="inline-flex items-center gap-2 font-semibold">
-                    <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-indigo-600 text-white">L</span>
-                    <span>{{ config('app.name', 'Laravel') }}</span>
-                </a>
 
-                <nav aria-label="Principal" class="hidden gap-6 md:flex">
-                    <a href="{{ url('/') }}" class="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Inici</a>
-                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">About</a>
-                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Contacte</a>
-                </nav>
-
-            </div>
-        </div>
-    </header>
 
     <!-- Main -->
     <main id="content" class="relative">
@@ -38,22 +21,8 @@
             <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
                 <div class="mx-auto max-w-3xl text-center">
                     <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                        Benvinguts al nostre projecte Laravel
+                        La meva biblioteca
                     </h1>
-                    <p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                        Un exemple senzill amb una petita base de dades de <span class="font-semibold">llibres</span> utilitzant <span class="font-semibold">SQLite</span>.
-                    </p>
-
-                    <div class="mt-8 flex items-center justify-center gap-3">
-                        <a href="https://laravel.com/docs" target="_blank" rel="noopener"
-                           class="rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900">
-                           Documentació Laravel
-                        </a>
-                        <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener"
-                           class="rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
-                           Tailwind CSS
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -63,10 +32,8 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="mb-8 flex items-end justify-between gap-4">
                     <div>
-                        <h2 id="books-heading" class="text-2xl font-semibold tracking-tight">📚 Darrers llibres</h2>
-                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
-                            Mostrem una selecció de llibres de la base de dades.
-                        </p>
+                        <h2 id="books-heading" class="text-2xl font-semibold tracking-tight">📚 Lectures 2026</h2>
+
                     </div>
                     @isset($books)
                         <span class="text-sm text-gray-500 dark:text-gray-400">{{ $books->count() }} resultats</span>
